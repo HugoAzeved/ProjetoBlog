@@ -6,9 +6,12 @@
 /* Definições de estilo */
 
 :root {
-    --fonte-padrao: sans-serif;
-    --tamanho-da-fonte: 16px;
-    --cor-do-fundo: #c5a3d8;
+    --fonte-padrao: lucida;
+    --tamanho-da-fonte: 15px;
+    --cor-da-fonte: #f7ebff;
+    --cor-do-fundo: #221e2e;
+    --cor-link-padrao: #f4f1ff;
+    --cor-link-hover: #dd2c2c;
 }
 
 /* Reset básico */
@@ -28,7 +31,30 @@ body,
     margin: 0;
     font-family: var(--fonte-padrao);
     font-size: var(--tamanho-da-fonte);
+    color: var(--cor-da-fonte);
 }
+
+/*Reset dos links*/
+
+a {
+    color: var(--cor-link-padrao);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--cor-link-hover);
+}
+
+/*Reset dos campos do formulario*/
+
+form input,
+form button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: .35rem .5rem;
+}
+
+/*Fundo da pagina*/
 
 body {
     background: var(--cor-do-fundo);
@@ -41,4 +67,93 @@ body {
 
 main {
     flex-grow: 1;
+}
+
+/*cabeçalho -> <header>*/
+
+header {
+    font-family: v;
+    background-color: #392caf;
+}
+
+header img {
+    display: block;
+    height: 5rem;
+    width: auto;
+    margin: .5rem 1rem .5rem .5rem;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+
+
+header form {
+    background-color: #401392;
+    padding: 1rem;
+    display: flex;
+}
+
+header form input {
+    flex-grow: 1;
+    border: none;
+    border-radius: .3rem 0 0 .3rem ;
+}
+header form button{
+    border: none;
+    border-radius: 0 .3rem .3rem 0;
+    cursor: pointer;
+}
+
+/*Menu pricipal <nav>*/
+
+/*Foto do usuario*/
+nav {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav img {
+    height: 2rem;
+    width: 2rem;
+}
+
+nav i {
+    font-size: 2rem;
+}
+
+nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: aliceblue;
+}
+
+nav a:hover{
+    color: rgb(0, 0, 0);
+    background-color: #ffff;
+}
+
+nav a:first-child{
+    margin-right: auto;
+}
+
+nav span {
+    margin-top: .5rem;
+}
+
+/* Conteudo Central <main>*/
+
+/*roda-pé <footer>*/
+footer{
+    background-color: #392caf;
 }
