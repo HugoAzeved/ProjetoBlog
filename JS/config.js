@@ -6,7 +6,7 @@ const site = {
     /**
       * Nome do site usado na tag <title>...</title> e nas interações dinâmicas
       **/
-    nome: "Chrono Mirror",
+    nome: "MusicVoice",
 
     /**
      * Logotipo do site, usado na tag <header>...</title>
