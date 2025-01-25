@@ -112,8 +112,7 @@ function template() {
             <a href="/" title="ir para pagina inicial"><i class="fa-solid fa-igloo fa-fw"></i></a>
 
             <div>
-                <i class="fa-regular fa-copyright fa-flip-horizontal fa-fw"></i>
-                <span>Copyleft 2025 ${site.proprietario}</span>
+                ${site.licensa}
                 <div><a href="privacidade.html">Políticas de Privacidade</a></div>
             </div>
 
