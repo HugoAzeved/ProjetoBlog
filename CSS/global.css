@@ -71,7 +71,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1480px;
     margin: auto;
 }
 
@@ -125,6 +125,7 @@ header form button {
     border: none;
     border-radius: 0 .3rem .3rem 0;
     cursor: pointer;
+    
 }
 
 /*Menu pricipal <nav>*/
@@ -155,7 +156,7 @@ nav a {
 
 nav a:hover {
     color: rgb(0, 0, 0);
-    background-color: #7cff92;
+    background-color: #947cff;
     border-radius: 3rem .3rem .3rem .3rem;
 }
 

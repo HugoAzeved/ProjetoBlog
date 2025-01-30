@@ -61,7 +61,6 @@ function dataJStoISO(dataJS) {
 
 
 
-
 /**
  * Retorna o "Node" de um elemento ou a "NodeList" de uma coleção de elementos usando o seletor especificado.
  * 
@@ -81,43 +80,46 @@ function _(seletor) {
     return document.querySelectorAll(seletor);
 }
 
+
+/**
+ * Login no firebase Authentication
+ */
+function fbSigIn(){
+    firebase.auth().signInWithPopup(provider);
+}
+
+
 function template() {
     return ` 
             <header>
-
             <div>
                 <a href="/"> <img src="${site.logo}" alt="${site.nome}"> </a>
                 <h1>${site.nome}</h1>
             </div>
-
             <!-- Formulário de pesquisa -->
-
             <form action="https://www.google.com/search?" method="get">
                 <input type="search" name="q" placeholder="Buscar...">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass fa-fw"></i></button>
             </form>
-
         </header>
-
         <nav>
             <a href="/" title="Página inicial"><i class="fa-solid fa-igloo fa-fw"></i><span>Inicío</span></a>
             <a href="contatos.html" title="Faça contato conosco"><i class="fa-solid fa-address-card fa-fw"></i><span>contados</span></a>
             <a href="sobre.html" title="Sobre o site"><i class="fa-solid fa-circle-info fa-fw"></i><span>sobre</span></a>
-            <a href="login.html" id="usuarioAcao" title="Logue-se no site"><img src="/img/usuario.png" alt="Faça login"><span>Login</span></a>
+            
+            <a href="login.html" id="usuarioAcao" title="Logue-se no site" data-acao="login">
+            <img src="/img/usuario.png" alt="Faça login" referrerpolicy="no-referrer">
+            <span>Login</span></a>
+            
         </nav>
-
         <main id="conteudo"></main>
-
         <footer>
             <a href="/" title="ir para pagina inicial"><i class="fa-solid fa-igloo fa-fw"></i></a>
-
             <div>
                 ${site.licensa}
                 <div><a href="privacidade.html">Políticas de Privacidade</a></div>
             </div>
-
             <a href="#wrap" title="ir para o começo dessa pagina"><i class="fa-solid fa-arrow-up-wide-short fa-fw"></i></a>
-
         </footer>
         
         `
