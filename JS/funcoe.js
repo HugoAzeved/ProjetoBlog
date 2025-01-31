@@ -88,6 +88,13 @@ function fbSigIn(){
     firebase.auth().signInWithPopup(provider);
 }
 
+/**
+ * Logout do Firebase Authentication
+ */
+function fbSignOut() {
+    firebase.auth().signOut();
+}
+
 
 function template() {
     return ` 

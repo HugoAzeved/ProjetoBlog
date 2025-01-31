@@ -20,7 +20,7 @@ const site = {
    * Se `true`, exibe o perfil do usuário → perfil.html
    * Se `false`, faz logout direto
    **/
-  verPerfil: false,
+  verPerfil: true,
 
   /**
    * Ano de lançamento do site
