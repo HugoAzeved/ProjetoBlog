@@ -7,7 +7,7 @@ setTimeout(()=>{
 
     _('#conteudo').innerHTML = `
 
-<img class="imgErro404" src="img/error.jpg" alt="Erro 404">
+<img class="imgErro404" src="img/error.png" alt="Erro 404">
 
     
     `;

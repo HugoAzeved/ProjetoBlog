@@ -91,8 +91,14 @@ function fbSigIn(){
 /**
  * Logout do Firebase Authentication
  */
-function fbSignOut() {
+function fbSignOut(abrePagina = '') {
+    // Realiza o logout do Firebase
     firebase.auth().signOut();
+
+    // Se o parâmetro abrePagina não for vazio, redireciona para a URL fornecida
+    if (abrePagina != '') {
+        location.href = abrePagina;
+    }
 }
 
 

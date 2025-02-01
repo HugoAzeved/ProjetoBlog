@@ -6,6 +6,9 @@ firebase.auth().onAuthStateChanged((user) => {
 
         console.log(user);
 
+        //titulo da pagina
+        document.title = `${site.nome} - Perfil de ${user.displayName}`;
+
         telefone = '';
         verificado = 'Não';
 
@@ -20,7 +23,7 @@ firebase.auth().onAuthStateChanged((user) => {
 <img class="fotoPerfil" src="${user.photoURL}" alt="Avatar de ${user.displayName}" referrerpolicy="no-referrer">
 
 
-<ul>
+<ul class="ulDados">
     <li><strong>E-mail:</strong> ${user.email}</li>
     <li><strong>E-mail verificado:</strong> ${verificado}</li>
     ${telefone}
@@ -30,11 +33,11 @@ firebase.auth().onAuthStateChanged((user) => {
 </ul>
 
 
-<p>Clique no botão a baixo para ver/editar seu perfil no google.</p>
+<p class=center >Clique no botão a baixo para ver/editar seu perfil no google.</p>
 <button class="btnPerfil" type="button" onclick="verPerfil()"><i class="fa-brands fa-google fa-fw"></i> Perfil no Google</button>
 
-<p>Clique no botão abaixo para fazer logout/sair do aplicativo.</p>
-<button class="btnLogout" type="button" onclick="fbSignOut()"> <i class="fa-solid fa-right-from-bracket"></i> </button>
+<p class=center >Clique no botão abaixo para fazer logout/sair do aplicativo.</p>
+<button class="btnLogout" type="button" onclick="fbSignOut()"> <i class="fa-solid fa-right-from-bracket"></i> logout/sair </button>
         `;
 
         // Exibe os dados no HTML
@@ -42,7 +45,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
     } else {
         // Se não está logado, mostra 404.html
-        location.href = '404.html';
+        location.href = 'index.html';
     }
 });
 
